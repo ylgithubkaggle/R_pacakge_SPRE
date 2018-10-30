@@ -1,0 +1,58 @@
+---
+title: "An R package for SPRE"
+author: "Vignette Author"
+date: "`r Sys.Date()`"
+output: rmarkdown::html_vignette
+vignette: >
+  %\VignetteIndexEntry{Vignette Title}
+  %\VignetteEngine{knitr::rmarkdown}
+  %\VignetteEncoding{UTF-8}
+---
+
+```{r setup, include = FALSE}
+knitr::opts_chunk$set(
+  collapse = TRUE,
+  comment = "#>"
+)
+```
+
+## Load package
+
+```{r}
+library(SPRE)
+```
+
+## Load HEAT data
+
+```{r}
+data("HEAT_stat")
+```
+
+## Fit model
+
+The following code fits the SPRE model:
+
+```{r,fig.width=7,fig.height=7}
+modelfit<-SPRE(predictor=HEAT_stat$Session,response=HEAT_stat$FData)
+```
+
+## Check residuals
+
+Check residuals from the linear model fit in the first step
+
+```{r,fig.width=7,fig.height=7}
+plot_residuals(modelfit)
+```
+
+## Analyze stability of predictions
+
+```{r,fig.width=7,fig.height=7}
+stability(modelfit)
+```
+
+## Plot weibull distribution
+
+```{r,fig.width=7,fig.height=7}
+plot_weibull(modelfit)
+```
+

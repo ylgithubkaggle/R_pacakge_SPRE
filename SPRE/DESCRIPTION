@@ -1,0 +1,16 @@
+Package: SPRE
+Title: What the Package Does (one line, title case)
+Version: 0.0.0.9000
+Authors@R: c(person("Deborah", "Weissman-Miller", email = "first.last@example.com", role = c("aut", "cre")),person("Rosalie", "Weissman-Miller", email = "rogville13@gmail.com", role = c("aut")))
+Maintainer: Lu You <you3939@ufl.edu>
+Description: SPRE (Semi-parametric Ratio Estimator) is a methodology proposed by Dr. Deborah Weissman-Miller, which provides a new statistical method for occupational therapy data that has both internal and external validity.
+Depends: R (>= 3.0.1)
+License: GPL-2
+Encoding: UTF-8
+LazyData: true
+RoxygenNote: 6.0.1
+Imports: MASS,
+    fitdistrplus,
+Suggests: knitr,
+    rmarkdown
+VignetteBuilder: knitr
