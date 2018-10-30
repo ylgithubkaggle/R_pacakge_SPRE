@@ -1,8 +1,8 @@
 SPRE
 ================
 
-Download and install the package from website
----------------------------------------------
+Download and install the package from github
+--------------------------------------------
 
 The whole process can be done in R. First check the availability of "devtools":
 
